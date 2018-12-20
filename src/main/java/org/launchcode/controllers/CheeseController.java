@@ -59,10 +59,10 @@ public class CheeseController {
             return "cheese/add";
         }
 
-            Category cat = categoryDao.findOne(categoryId);
-            newCheese.setCategory(cat);
-            cheeseDao.save(newCheese);
-            return "redirect:";
+        Category cat = categoryDao.findOne(categoryId);
+        newCheese.setCategory(cat);
+        cheeseDao.save(newCheese);
+        return "redirect:";
     }
 
     @RequestMapping(value = "remove", method = RequestMethod.GET)
